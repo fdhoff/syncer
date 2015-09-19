@@ -1,13 +1,13 @@
-syncer -- stateful file/device data syncer.
+syncer -- Fast stateful file/disk data syncer.
 
 DESCRIPTION
 
 Main purpose of this utility is fast data synchronizing between two hard
 drives: one is fast (SSD, SATA HDD), another is connected through slow
-USB interface.
+USB interface. Task is to lower amounts of data needed to be transferred.
 
 This utility is stateful: it keeps precomputed data hashes in separate
-statefile and use it to determine if we need to update the data.
+statefile and use it to determine if we need to update block of data.
 
     # sync from very fast SSD to slow USB connected HDD
     % ./syncer -src /dev/ada0 -dst /dev/da0 -state state.bin
@@ -15,7 +15,7 @@ statefile and use it to determine if we need to update the data.
     # all blocks were transferred to da0
 
 Now we have statefile containing cryptographic hashes of the blocks from
-source, copy of all read data in destination. Now if we run it again:
+source and copy of all read data in destination. Now if we run it again:
 
     % ./syncer -src /dev/ada0 -dst /dev/da0 -state state.bin
     [....%.]
