@@ -87,7 +87,7 @@ func main() {
 	}
 	defer dst.Close()
 
-	// Check if we already have statefile and read the state
+	// Check if we already have statefile and read the state//
 	state := make([]byte, blake2b.Size*blocks)
 	var i int64
 	var tmp []byte
