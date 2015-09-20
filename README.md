@@ -54,6 +54,6 @@ syncer is free software: see the file COPYING for copying conditions.
 `SRC_SIZE || BLK_SIZE || HASH0 || HASH1 || ...`
 
 SRC_SIZE contains size of the source, when it was firstly read. BLK_SIZE
-is the blocksize used. Both is 64-bit big-endian unsigned integers. If
+is the blocksize used. Both are 64-bit big-endian unsigned integers. If
 either size or blocksize differs, then syncer will deny using that
 statefile as a precaution. HASHx is BLAKE2b-512 hash output, 64 bytes.
