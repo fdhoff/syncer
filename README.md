@@ -5,7 +5,7 @@ Fast stateful file/disk data syncer.
 
 #### Description
 
-The maain purpose of this utility is fast data synchronizing between two
+The main purpose of this utility is fast data synchronizing between two
 hard drives: one is fast (SSD, SATA HDD), another is connected through
 slow USB interface. Task is to lower amounts of data needed to be
 transferred.
